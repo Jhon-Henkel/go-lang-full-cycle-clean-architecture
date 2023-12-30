@@ -8,4 +8,5 @@ import "github.com/Jhon-Henkel/go-lang-full-cycle-clean-architecture/internal/us
 
 type Resolver struct {
 	CreateOrderUseCase usecase.CreateOrderUseCase
+	ListOrderUseCase   usecase.ListOrdersUseCase
 }
