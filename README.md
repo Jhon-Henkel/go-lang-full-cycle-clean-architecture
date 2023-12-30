@@ -30,7 +30,7 @@ go run main.go wire_gen.go
   evans -r repl
   package pb
   service OrderService
-  call [Method Name] # Selecionar o método (CreateOrder ou ListOrder).
+  call [Method Name] # Selecionar o método (CreateOrder ou ListOrders).
   ```
 - #### GraphQL
   Acessar o endereço `http://localhost:8080/graphql` e rodar a query:
@@ -52,6 +52,17 @@ go run main.go wire_gen.go
         }
       }
       ```
+  - List Orders:
+    ```graphql
+      query listOrders {
+        orders {
+          id
+          Tax
+          Price
+          FinalPrice
+       }
+     }
+    ```
 
 ## Erros comuns:
 - Dirty database version 1 ao rodar `make migrate`. Fix and force version. Rode (um comando por vez):
